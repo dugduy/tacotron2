@@ -19,7 +19,8 @@ def create_hparams(hparams_string=None, verbose=False):
         dist_url="tcp://localhost:54321",
         cudnn_enabled=True,
         cudnn_benchmark=False,
-        ignore_layers=['embedding.weight'],
+#         ignore_layers=['embedding.weight'],
+        ignore_layers=[''],
 
         ################################
         # Data Parameters             #
@@ -27,7 +28,7 @@ def create_hparams(hparams_string=None, verbose=False):
         load_mel_from_disk=False,
         training_files='filelists/ljs_audio_text_train_filelist.txt',
         validation_files='filelists/ljs_audio_text_val_filelist.txt',
-        text_cleaners=['english_cleaners'],
+        text_cleaners=['basic_cleaners'],
 
         ################################
         # Audio Parameters             #
